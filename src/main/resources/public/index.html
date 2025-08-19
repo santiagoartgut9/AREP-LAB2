@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Servidor Web Simple</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <img src="images/LOG.jpg" alt="Logo" class="logo">
+        <h1>Servidor Web Simple con Java</h1>
+    </header>
+
+    <div class="container">
+        <!-- Contenido principal -->
+        <main>
+            <div class="form-row">
+                <section class="form-card">
+                    <h2>GET</h2>
+                    <input type="text" id="name" value="John">
+                    <button onclick="loadGetMsg()">Enviar GET</button>
+                </section>
+
+                <section class="form-card">
+                    <h2>POST</h2>
+                    <input type="text" id="postname" value="John">
+                    <button onclick="loadPostMsg()">Enviar POST</button>
+                </section>
+            </div>
+
+            <!-- Nueva fila para las respuestas -->
+            <div class="response-row">
+                <section class="response-card">
+                    <h3>Respuesta GET</h3>
+                    <div id="getrespmsg" class="response-content">Aquí aparecerá la respuesta del GET...</div>
+                </section>
+
+                <section class="response-card">
+                    <h3>Respuesta POST</h3>
+                    <div id="postrespmsg" class="response-content">Aquí aparecerá la respuesta del POST...</div>
+                </section>
+            </div>
+        </main>
+
+        <!-- Sidebar -->
+        <aside>
+            <h3>Galería</h3>
+
+            <div class="sidebar-card">
+                <img src="images/UNI.jpg" alt="Foto 1">
+                <h4>Escuela Colombiana de Ingeniería Julio Garavito <span>Saber más</span></h4>
+                <a href="https://www.escuelaing.edu.co/es/" target="_blank" class="sidebar-btn">Leer más</a>
+            </div>
+
+            <div class="sidebar-card">
+                <img src="images/UNI2.jpg" alt="Foto 2">
+                <h4>Bienestar Universitario <span>Saber más</span></h4>
+                <a href="https://www.escuelaing.edu.co/es/campus/presentacion-bienestar-universitario/" target="_blank" class="sidebar-btn">Leer más</a>
+            </div>
+        </aside>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
