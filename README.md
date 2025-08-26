@@ -9,7 +9,7 @@ Con este framework, los desarrolladores podrán definir **endpoints usando funci
 
 ---
 
-## 🎯 Objective
+##  Objective
 El propósito del proyecto es:
 - Entender y aplicar los principios de la **arquitectura cliente-servidor**.  
 - Construir un **framework básico en Java** para definir servicios REST.  
@@ -17,7 +17,7 @@ El propósito del proyecto es:
 
 ---
 
-## 🚀 Project Scope and Features
+##  Project Scope and Features
 
 ### 1. **GET Static Method for REST Services**
 Permite definir endpoints REST usando funciones lambda:
