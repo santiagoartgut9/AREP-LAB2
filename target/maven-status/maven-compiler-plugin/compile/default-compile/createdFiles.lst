@@ -1,3 +1,8 @@
+edu\escuelaing\app\framework\Request.class
 edu\escuelaing\app\UrlUtils.class
 edu\escuelaing\app\SimpleHttpServer.class
+edu\escuelaing\app\framework\Response.class
 edu\escuelaing\app\MimeTypes.class
+edu\escuelaing\app\framework\Route.class
+edu\escuelaing\app\App.class
+edu\escuelaing\app\framework\WebApp.class

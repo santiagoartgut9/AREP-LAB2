@@ -1,12 +1,26 @@
 package edu.escuelaing.app;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class MimeTypes {
+    private static final Map<String, String> mimeTypes = new HashMap<>();
+
+    static {
+        mimeTypes.put("html", "text/html");
+        mimeTypes.put("css", "text/css");
+        mimeTypes.put("js", "application/javascript");
+        mimeTypes.put("png", "image/png");
+        mimeTypes.put("jpg", "image/jpeg");
+        mimeTypes.put("jpeg", "image/jpeg");
+    }
+
     public static String getMimeType(String filename) {
-        if (filename.endsWith(".html")) return "text/html";
-        if (filename.endsWith(".css")) return "text/css";
-        if (filename.endsWith(".js")) return "application/javascript";
-        if (filename.endsWith(".png")) return "image/png";
-        if (filename.endsWith(".jpg") || filename.endsWith(".jpeg")) return "image/jpeg";
-        return "text/plain";
+        int dotIndex = filename.lastIndexOf(".");
+        if (dotIndex == -1) {
+            return "text/plain";
+        }
+        String ext = filename.substring(dotIndex + 1).toLowerCase();
+        return mimeTypes.getOrDefault(ext, "text/plain");
     }
 }

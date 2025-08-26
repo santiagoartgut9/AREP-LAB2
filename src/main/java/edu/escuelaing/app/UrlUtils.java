@@ -1,26 +1,29 @@
 package edu.escuelaing.app;
 
+import java.net.URLDecoder;
+import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Map;
 
 public class UrlUtils {
-    public static Map<String, String> parseQuery(String path) {
+    /**
+     * Parsea la query string en un mapa clave-valor,
+     * decodificando espacios, acentos y caracteres especiales.
+     * Ej: "name=Juan+P%C3%A9rez&msg=hola%20mundo"
+     */
+    public static Map<String, String> parseQuery(String query) {
         Map<String, String> params = new HashMap<>();
-        int idx = path.indexOf('?');
-        if (idx != -1) {
-            String query = path.substring(idx + 1);
-            for (String pair : query.split("&")) {
-                String[] keyValue = pair.split("=");
-                if (keyValue.length == 2) {
-                    params.put(keyValue[0], keyValue[1]);
-                }
-            }
+        if (query == null || query.isEmpty()) {
+            return params;
+        }
+        for (String pair : query.split("&")) {
+            String[] keyValue = pair.split("=", 2);
+            String key = URLDecoder.decode(keyValue[0], StandardCharsets.UTF_8);
+            String value = keyValue.length > 1
+                    ? URLDecoder.decode(keyValue[1], StandardCharsets.UTF_8)
+                    : "";
+            params.put(key, value);
         }
         return params;
-    }
-
-    public static String stripQuery(String path) {
-        int idx = path.indexOf('?');
-        return idx == -1 ? path : path.substring(0, idx);
     }
 }
