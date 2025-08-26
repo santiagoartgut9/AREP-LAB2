@@ -199,6 +199,7 @@ Java 17 – Lenguaje principal
 Maven – Gestión de dependencias y build
 
 JUnit 4 – Testing framework
+---
 🎓 Outcome
 
 Este proyecto dota a los desarrolladores de un mini-framework robusto para crear aplicaciones web con servicios REST y manejo de archivos estáticos. Además, fortalece la comprensión de:
@@ -208,7 +209,7 @@ Arquitectura HTTP y cliente-servidor
 Arquitectura distribuida en aplicaciones modernas
 
 Diseño de servicios web escalables y mantenibles
-
+---
 ✒️ Author
 
 Proyecto desarrollado por:
